@@ -2,3 +2,28 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
+body {
+  background-color: #E5E5E5;
+  background: border-box red url(../img/bg-main.jpg) no-repeat scroll;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+input, textarea {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
