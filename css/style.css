@@ -1,11 +1,14 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  color: #dbcfcf;
 }
 
 body {
-  background-color: #E5E5E5;
-  background: border-box red url(../img/bg-main.jpg) no-repeat scroll;
+  background-color: #3D4849;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -27,3 +30,36 @@ img {
 button {
   cursor: pointer;
 }
+
+.header {
+  width: 100vw;
+  height: 60px;
+  background-color: #000000;
+}
+
+.header_list {
+  padding: 20px 25%;
+}
+
+.navbar {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar_link {
+  text-decoration: none;
+}
+
+.navbar_link:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=style.css.map */
