@@ -6,19 +6,23 @@
   width: 100vw
   height: $header-height
   //background-color: #000000
-  &_list
+  &-list
     padding: 20px 25%
-  &_lang
+  &-lang
     position: absolute
     top: 20px
     right: 20px
+    @include font($light, $navbar, $text-primary, $font-opensans)
+    line-height: $navbar
 .navbar
   @include navbar
-  &_item
-  &_link
+  &-item
+  &-link
+    @include font($light, $navbar, $text-primary, $font-opensans)
+    line-height: $navbar
     text-decoration: none
     &:hover
       text-decoration: underline
-  &_separator
+  &-separator
     @include font($light, $font-18, $text-primary, $font-opensans)
     filter: brightness(70%)

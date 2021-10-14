@@ -1,57 +1,62 @@
+
 .hero
-  &_bg
+  &-bg
     //background-image: linear-gradient(180deg, rgba(136, 168, 255, 0.301), rgba(132, 132, 132, 0.6)), url("../img/bg-main.jpg")
     //background-repeat: no-repeat
     background: center / 100% 100% no-repeat url("../img/bg-main.jpg")
     @include fullScr
-  &_gradient
+  &-gradient
     background-image: linear-gradient(180deg, rgba(58, 110, 255, 0.1), rgba(58, 110, 255, 0.3),rgba(61, 72, 73, 0.5), rgba(61, 72, 73, 0.6), rgba(61, 72, 73, 1))
     @include fullScr
-  &_grid
+  &-grid
     width: 100vw
     height: calc(100vh - #{$header-height})
     padding: calc((100vh - #{$header-height})/100) 1vw
 .grid
   display: grid
-  grid-template-columns: 28vw minmax(40vw, 90vw) 28vw
+  grid-template-columns: 1fr max-content 1fr
+  //grid-template-columns: 28vw minmax(40vw, 90vw) 28vw
   //grid-template-columns: 1fr minmax(40vw, 90vw) 1fr
   //grid-template-rows: calc((100vh - #{$header-height})/100*22) calc((100vh - #{$header-height})/100*40) calc((100vh - #{$header-height})/100*34)
   grid-template-rows: 1fr fit-content(calc((100vh - #{$header-height})/100*40) 90%) 1.55fr
   grid-gap: calc((100vh - #{$header-height})/100) 1vw
-  &_item
+  &-item
     //border: 1px solid red
 .content
+  max-width: 1000px
   padding: 3%
   display: flex
   flex-direction: column
   justify-content: space-between
   align-items: center
   text-align: center
-  &_heading
+  &-heading
     @include font($black, 6rem, $text-primary, $font-mulish)
     line-height: normal
-  &_text
+  &-text
     @include font($regular, 1.5rem, $text-primary, $font-opensans)
-    line-height: normal
+    line-height: 2.5rem
     opacity: 0.75
-    &-indent
+    min-height: 100px
+    &__indent
       @include font($bold, 1.5rem, $text-primary, $font-opensans)
-      line-height: normal
+      line-height: 2.5rem
       opacity: 1
       &:hover
         text-decoration: underline
         cursor: pointer
-  &_line
+  &-line
     width: 20%
     opacity: 0.5
-  &_social
-    min-width: 35%
+  &-social
+    width: 100%
+    padding: 0 25%
     display: flex
     flex-direction: row
     justify-content: space-between
     align-items: center
 .social
-  &_icon
+  &-icon
     font-size: 2rem
 .item8
   padding-bottom: 10px
@@ -61,3 +66,5 @@
   justify-content: flex-end
 .mouse
   margin-bottom: 10px
+.continue
+  text-decoration: none
