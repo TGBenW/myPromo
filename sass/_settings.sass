@@ -1,18 +1,19 @@
 *
+  @include dropmarpad
+  @include font($regular, $font-20, $text-primary, $font-opensans)
   box-sizing: border-box
   scroll-behavior: smooth
-  margin: 0
-  padding: 0
   color: $text-primary
-  @include font($regular, $font-20, $text-primary, $font-opensans)
   overflow-x: hidden
 
+h1, h2, h3, h4, h5, h6
+  @include dropmarpad
 body
   background-color: $bg
   font-style: normal
   font-weight: normal
   font-size: 14px
-  line-height: 20px
+  //line-height: 20px
 
 input, textarea
   outline: none

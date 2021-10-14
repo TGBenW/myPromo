@@ -1,0 +1,63 @@
+.hero
+  &_bg
+    //background-image: linear-gradient(180deg, rgba(136, 168, 255, 0.301), rgba(132, 132, 132, 0.6)), url("../img/bg-main.jpg")
+    //background-repeat: no-repeat
+    background: center / 100% 100% no-repeat url("../img/bg-main.jpg")
+    @include fullScr
+  &_gradient
+    background-image: linear-gradient(180deg, rgba(58, 110, 255, 0.1), rgba(58, 110, 255, 0.3),rgba(61, 72, 73, 0.5), rgba(61, 72, 73, 0.6), rgba(61, 72, 73, 1))
+    @include fullScr
+  &_grid
+    width: 100vw
+    height: calc(100vh - #{$header-height})
+    padding: calc((100vh - #{$header-height})/100) 1vw
+.grid
+  display: grid
+  grid-template-columns: 28vw minmax(40vw, 90vw) 28vw
+  //grid-template-columns: 1fr minmax(40vw, 90vw) 1fr
+  //grid-template-rows: calc((100vh - #{$header-height})/100*22) calc((100vh - #{$header-height})/100*40) calc((100vh - #{$header-height})/100*34)
+  grid-template-rows: 1fr fit-content(calc((100vh - #{$header-height})/100*40) 90%) 1.55fr
+  grid-gap: calc((100vh - #{$header-height})/100) 1vw
+  &_item
+    //border: 1px solid red
+.content
+  padding: 3%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  text-align: center
+  &_heading
+    @include font($black, 6rem, $text-primary, $font-mulish)
+    line-height: normal
+  &_text
+    @include font($regular, 1.5rem, $text-primary, $font-opensans)
+    line-height: normal
+    opacity: 0.75
+    &-indent
+      @include font($bold, 1.5rem, $text-primary, $font-opensans)
+      line-height: normal
+      opacity: 1
+      &:hover
+        text-decoration: underline
+        cursor: pointer
+  &_line
+    width: 20%
+    opacity: 0.5
+  &_social
+    min-width: 35%
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+.social
+  &_icon
+    font-size: 2rem
+.item8
+  padding-bottom: 10px
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: flex-end
+.mouse
+  margin-bottom: 10px
